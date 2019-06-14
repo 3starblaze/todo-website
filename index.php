@@ -7,6 +7,47 @@
   </head>
   <body>
     <h1>Darāmo lietu saraksts</h1>
+    <?php
+
+$servername = "localhost";
+$username = "server";
+$password = "yourpassword";
+$dbname = "todo";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql = "SELECT * FROM todolist";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+        
+        $checked_string;
+        if ($row == '1') { $checked_string = ' checked'; }
+        else { $checked_string = ''; }
+        echo "<div id=$row[id] class=\"task\">".
+               "<input type=\"checkbox\"".
+                 $checked_string.
+                 ">".
+               "<h2 class=\"title\">$row[title]</h2>".
+                "<p class=\"date\">$row[date]</p>".
+                "<p class=\"description\">$row[description]</p>".
+                "<a href=\"#\"><button>Labot</button></a>".
+              "</div>";
+        //TODO: link to todo task editing page
+    }
+}
+
+$conn->close();
+?>
+
     <a href="create-new.html">
       <button id="create-new">Pievienot jaunu</button>
     </a>
