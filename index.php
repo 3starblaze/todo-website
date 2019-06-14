@@ -32,13 +32,18 @@ if ($result->num_rows > 0) {
         $checked_string;
         if ($row[is_done]) { $checked_string = ' checked'; }
         else { $checked_string = ''; }
+        
+        $title = htmlEntities($row['title'], ENT_QUOTES);
+        $date = htmlEntities($row['date'], ENT_QUOTES);
+      $description = htmlEntities($row['description'], ENT_QUOTES);
+               
         echo "<div id=$row[id] class=\"task\">".
                "<input type=\"checkbox\"".
                  $checked_string.
                  ">".
-               "<h2 class=\"title\">$row[title]</h2>".
-                "<p class=\"date\">$row[date]</p>".
-                "<p class=\"description\">$row[description]</p>".
+               "<h2 class=\"title\">$title</h2>".
+                "<p class=\"date\">$date</p>".
+                "<p class=\"description\">$description</p>".
                 "<a href=\"#\"><button>Labot</button></a>".
               "</div>";
         //TODO: link to todo task editing page
