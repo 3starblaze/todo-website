@@ -41,8 +41,10 @@
       "<form>".
         "<button name=\"id\" value=\"$id\">Dzēst</button>".
       "</form>".
-      "<a href=\"/\"><button>Doties atpakaļ</button></a>";
-        
+        "<a href=\"/\"><button>Doties atpakaļ</button></a>";
+
+    if($conn->query($query) === FALSE) {echo 'query failed';}
+    $conn->close();
     ?>
   </body>
 </html>
