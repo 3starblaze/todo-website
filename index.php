@@ -2,6 +2,7 @@
 <html>
   <head>
     <link href="styles/style.css" rel="stylesheet">
+    <script src="checkbox-listener.js"></script>
     <meta charset="utf-8">
     <title>Darāmo lietu saraksts</title>
   </head>
