@@ -7,17 +7,32 @@
   </head>
   <body>
     <h1>Darāmo lietu saraksts</h1>
-    <form action="" method="post">
-      <label for="title">Virsraksts:</label>
-      <input type="text" id="title" name="title" value="">
-      <label for="description">Apraksts:</label>
-      <input type="text" id="description" name="description">
-      <button>Saglabāt</button>
-    </form>
-       
+    <?php
+    $servername = "localhost";
+    $username = "server";
+    $password = "yourpassword";
+    $dbname = "todo";
+    
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+    
+    $title = $conn->real_escape_string($_POST[title]);
+    $description = $conn->real_escape_string($_POST['description']);
+
+    echo "<form action=\"\" method=\"post\">".
+      "<label for=\"title\">Virsraksts:</label>".
+      "<input type=\"text\" id=\"title\" name=\"title\" ".
+        "value=$title>".
+      "<label for=\"description\">Apraksts:</label>".
+      "<input type=\"text\" id=\"description\" name=\"description\" ".
+        "value=$description>".
+        "<button>Saglabāt</button>".
+        "</form>";
+    ?>
   </body>
 </html>
-
-<?php
-
-?>
