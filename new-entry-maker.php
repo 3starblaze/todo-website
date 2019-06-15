@@ -1,4 +1,6 @@
 <?php
+// Redirect home
+header('Location: /');
 $servername = "localhost";
 $username = "server";
 $password = "yourpassword";
