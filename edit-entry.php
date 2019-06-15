@@ -38,7 +38,7 @@
         "value=\"$description\">".
         "<button name=\"id\" value=\"$id\">Saglabāt</button>".
       "</form>".
-      "<form>".
+      "<form action=\"entry-deleter.php\" method=\"post\">".
         "<button name=\"id\" value=\"$id\">Dzēst</button>".
       "</form>".
         "<a href=\"/\"><button>Doties atpakaļ</button></a>";
