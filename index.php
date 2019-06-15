@@ -44,7 +44,7 @@ if ($result->num_rows > 0) {
                "<h2 class=\"title\">$title</h2>".
                 "<p class=\"date\">$date</p>".
                 "<p class=\"description\">$description</p>".
-                "<form action=\"\" method=\"post\">".
+                "<form action=\"edit-entry.php\" method=\"post\">".
                    "<button name=\"id\" value=$row[id]>Labot</button>".
                 "</form>".
               "</div>";
