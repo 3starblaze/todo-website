@@ -39,9 +39,14 @@ if ($result->num_rows > 0) {
         $description = htmlEntities($row['description'], ENT_QUOTES);
                
         echo "<div id=$row[id] class=\"task\">".
-               "<input type=\"checkbox\"".
-                 $checked_string.
-                 "/>".
+               "<form action=\"status-editor.php\" method=\"post\">".
+                 "<button class=\"check\" name=\"id\" ".
+                 "value=$row[id]>".
+                 "<input type=\"checkbox\"".
+                   $checked_string.
+                  "/>".
+                  "</button>".
+               "</form>".
                "<h2 class=\"title\">$title</h2>".
                 "<p class=\"date\">$date</p>".
                 "<p class=\"description\">$description</p>".
