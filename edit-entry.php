@@ -3,7 +3,7 @@
   <head>
     <link href="styles/style.css" rel="stylesheet">
     <meta charset="utf-8">
-    <title>Pievienot jaunu</title>
+    <title>Labot</title>
   </head>
   <body>
     <h1>Darāmo lietu saraksts</h1>
