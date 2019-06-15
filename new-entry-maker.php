@@ -16,10 +16,6 @@ $title = $conn->real_escape_string($_POST[title]);
 $description = $conn->real_escape_string($_POST['description']);
 $date = date("Y-m-d");
 
-echo $title;
-echo $description;
-echo $date;
-
 // id | title | description | date | is_done
 $query = "INSERT INTO todolist VALUES (NULL, \"$title\",".
        "\"$description\", \"$date\", FALSE)";
