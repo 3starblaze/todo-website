@@ -20,18 +20,23 @@
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }
-    
-    $title = $conn->real_escape_string($_POST[title]);
-    $description = $conn->real_escape_string($_POST['description']);
 
-    echo "<form action=\"\" method=\"post\">".
+    $id = $conn->real_escape_string($_POST[id]);
+    $query = "SELECT title, description FROM todolist WHERE ID=$id";
+    $result = $conn->query($query)->fetch_assoc();
+    
+    $title = htmlentities($result['title']);
+    $description = htmlentities($result['description']);
+    $id = htmlentities($_POST[id]);
+
+    echo "<form action=\"/\" method=\"post\">".
       "<label for=\"title\">Virsraksts:</label>".
       "<input type=\"text\" id=\"title\" name=\"title\" ".
-        "value=$title>".
+        "value=\"$title\">".
       "<label for=\"description\">Apraksts:</label>".
       "<input type=\"text\" id=\"description\" name=\"description\" ".
-        "value=$description>".
-        "<button>Saglabāt</button>".
+        "value=\"$description\">".
+        "<button name=\"id\" value=\"$id\">Saglabāt</button>".
         "</form>";
     ?>
   </body>
