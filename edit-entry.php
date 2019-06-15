@@ -29,7 +29,7 @@
     $description = htmlentities($result['description']);
     $id = htmlentities($_POST[id]);
 
-    echo "<form action=\"/\" method=\"post\">".
+    echo "<form action=\"entry-editor.php\" method=\"post\">".
       "<label for=\"title\">Virsraksts:</label>".
       "<input type=\"text\" id=\"title\" name=\"title\" ".
         "value=\"$title\">".
@@ -37,7 +37,12 @@
       "<input type=\"text\" id=\"description\" name=\"description\" ".
         "value=\"$description\">".
         "<button name=\"id\" value=\"$id\">Saglabāt</button>".
-        "</form>";
+      "</form>".
+      "<form>".
+        "<button name=\"id\" value=\"$id\">Dzēst</button>".
+      "</form>".
+      "<a href=\"/\"><button>Doties atpakaļ</button></a>";
+        
     ?>
   </body>
 </html>
