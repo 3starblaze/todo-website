@@ -23,12 +23,12 @@ CREATE DATABASE todo;
    ```
    * Create new table
    ```mysql
-     CREATE TABLE todolist (
-    'id' int(11) NOT NULL AUTO_INCREMENT,
-    'title' varchar(80) NOT NULL,
-    'description' varchar(200) DEFAULT NULL,
-    'date' date NOT NULL,
-    'is_done' tinyint(1) NOT NULL)
+   CREATE TABLE todolist (
+ id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+ title varchar(80) NOT NULL,
+ description varchar(200) DEFAULT NULL,
+ date date NOT NULL,
+ is_done tinyint(1) NOT NULL);
 	```
 
 6. In mysql create user account with password by command:
