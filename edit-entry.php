@@ -43,7 +43,8 @@
         "<div class=\"form-group\">".
       "<label for=\"title\">Virsraksts:</label>".
       "<input type=\"text\" id=\"title\" name=\"title\" ".
-        "value=\"$title\" class=\"form-control col-5\">".
+        "value=\"$title\" class=\"form-control col-5\" ".
+        "required minlength=\"1\">".
         "</div>".
         "<div class=\"form-group\">".
       "<label for=\"description\">Apraksts:</label>".
