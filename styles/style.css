@@ -1,5 +1,49 @@
+body {
+    background-color: #FFFDFC !important;
+    color: #797979 !important;
+    text-shadow: 2px 2px 2px #ACAEAE;
+}
+button.btn-primary {
+    background-color: #5C5C5C;
+    border-color: #535353;
+}
+button.btn-primary:hover {
+    background-color: #797979;
+    border-color: #5C5C5C;
+}
 
 div.task {
-    background-color: #f5deb3;
-    border: solid black 2px;
+    background-color: #CACACA;
+    min-width: 200px;
+    margin: 0 0 5px 0;
+    padding: 20px 10px;
 }
+
+div.task .description {
+    margin: 0 0 0 10px;
+}
+div.task button.edit {
+    margin: 10px;
+}
+
+div.task button.check {
+    height: 0px;
+    width: 0px;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
+div.task ul.nav {
+    justify-content: space-between;
+}
+
+/* make next 2 objects inline so they are displayed in 1 line */
+div.task form.checkform {
+    margin: 10px 20px 0 5px;
+    display: inline;
+}
+div.task ul.nav li.left-side .title {
+    display: inline;
+}
+
