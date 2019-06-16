@@ -24,7 +24,7 @@ CREATE DATABASE todo;
    mysql -u __priviliged-username__ -p todo < mysqldump
    ```
    2. 
-   ```
+   ```mysql
      CREATE TABLE todolist (
     'id' int(11) NOT NULL AUTO_INCREMENT,
     'title' varchar(80) NOT NULL,
