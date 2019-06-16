@@ -1,0 +1,41 @@
+div.form-group label, input {
+    display: block;
+}
+
+form.edit-form {
+    display: block;
+    
+    background-color: #f5f5f5;
+    border: solid #dcdcdc 2px;
+    border-width: 2px 2px 0 2px;
+    
+    margin: 10px 10px 0 10px;
+    padding: 20px 10px 0 10px;
+}
+
+#title, #description {
+    margin: 5px;
+}
+
+h1, h2 {
+    margin: 10px;
+}
+h1 {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+button {
+    width: 200px;
+}
+
+form.edit-form button {
+    margin: 0 0 0 -10px !important;
+}
+
+#second-box {
+    background-color: #f5f5f5;
+    border: solid #dcdcdc 2px;
+    border-width: 0 2px 2px 2px;
+    margin: 0 10px 0 10px;
+}
