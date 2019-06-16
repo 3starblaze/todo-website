@@ -24,13 +24,14 @@ CREATE DATABASE todo;
    mysql -u __priviliged-username__ -p todo < mysqldump
    ```
    2. 
+   ```
      CREATE TABLE todolist (
     'id' int(11) NOT NULL AUTO_INCREMENT,
     'title' varchar(80) NOT NULL,
     'description' varchar(200) DEFAULT NULL,
     'date' date NOT NULL,
     'is_done' tinyint(1) NOT NULL)
-
+	```
 
 6. In mysql create user account with password by command:
 ```mysql
