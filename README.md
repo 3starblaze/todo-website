@@ -48,3 +48,6 @@ $username = '__username__';
 $password = '__password__';
 $dbname = 'todo';
 ```
+
+9. Done. If you have done all steps correctly, your server works fine and you have all neccessary libraries then everything should work fine.
+
