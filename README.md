@@ -19,11 +19,11 @@ CREATE DATABASE todo;
 
    __Importing table from mysql dump file__ (Assuming that you are located in the root of the project)
    
-   1. Load mysqldump in _commandline_
+   * Load mysqldump in _commandline_
    ```shell
    mysql -u __priviliged-username__ -p todo < mysqldump
    ```
-   2. 
+   * Create new table
    ```mysql
      CREATE TABLE todolist (
     'id' int(11) NOT NULL AUTO_INCREMENT,
