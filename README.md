@@ -17,7 +17,7 @@ CREATE DATABASE todo;
 ```
 5. Import or make table todolist
 
-   * Load mysqldump in _commandline_ (Assuming that you are located in the root of the project)
+   * Load mysqldump in _command line_ (assuming that you are located in the root of the project)
    ```shell
    mysql -u __priviliged-username__ -p todo < mysqldump
    ```
@@ -31,7 +31,7 @@ CREATE DATABASE todo;
    is_done tinyint(1) NOT NULL);
    ```
 
-6. In mysql create user account with password by command:
+6. In mysql create user account with password
 ```mysql
 CREATE USER '__username__'@'localhost' IDENTIFIED BY '__password__';
 ```
