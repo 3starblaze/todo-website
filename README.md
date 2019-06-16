@@ -17,9 +17,7 @@ CREATE DATABASE todo;
 ```
 5. Import or make table todolist
 
-   __Importing table from mysql dump file__ (Assuming that you are located in the root of the project)
-   
-   * Load mysqldump in _commandline_
+   * Load mysqldump in _commandline _ (Assuming that you are located in the root of the project)
    ```shell
    mysql -u __priviliged-username__ -p todo < mysqldump
    ```
