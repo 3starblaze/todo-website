@@ -29,7 +29,7 @@ CREATE DATABASE todo;
    description varchar(200) DEFAULT NULL,
    date date NOT NULL,
    is_done tinyint(1) NOT NULL);
-```
+   ```
 
 6. In mysql create user account with password by command:
 ```mysql
