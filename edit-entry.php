@@ -2,11 +2,20 @@
 <html>
   <head>
     <link href="styles/style.css" rel="stylesheet">
+    <link href="styles/style-edit-entry.css" rel="stylesheet">
+        <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <title>Labot</title>
   </head>
   <body>
     <h1>Darāmo lietu saraksts</h1>
+    <h2>Labot</h2>
     <?php
     $servername = "localhost";
     $username = "server";
@@ -29,19 +38,31 @@
     $description = htmlentities($result['description']);
     $id = htmlentities($_POST[id]);
 
-    echo "<form action=\"entry-editor.php\" method=\"post\">".
+    echo "<form action=\"entry-editor.php\" method=\"post\" ".
+        "class=\"edit-form\">".
+        "<div class=\"form-group\">".
       "<label for=\"title\">Virsraksts:</label>".
       "<input type=\"text\" id=\"title\" name=\"title\" ".
-        "value=\"$title\">".
+        "value=\"$title\" class=\"form-control col-5\">".
+        "</div>".
+        "<div class=\"form-group\">".
       "<label for=\"description\">Apraksts:</label>".
-      "<input type=\"text\" id=\"description\" name=\"description\" ".
-        "value=\"$description\">".
-        "<button name=\"id\" value=\"$id\">Saglabāt</button>".
+      "<textarea type=\"text\" id=\"description\" name=\"description\" ".
+        "class=\"form-control col-11\">".
+        "$description".
+        "</textarea>".
+        "</div>".
+        "<button name=\"id\" class=\"btn btn-success\" ".
+        "value=\"$id\">Saglabāt</button>".
       "</form>".
+      "<div id=\"second-box\">".
       "<form action=\"entry-deleter.php\" method=\"post\">".
-        "<button name=\"id\" value=\"$id\">Dzēst</button>".
+        "<button name=\"id\" class=\"btn btn-danger\" ".
+        "value=\"$id\">Dzēst</button>".
       "</form>".
-        "<a href=\"/\"><button>Doties atpakaļ</button></a>";
+        "<a href=\"/\"><button class=\"btn btn-secondary\">".
+        "Doties atpakaļ</button></a>".
+        "</div>";
 
     if($conn->query($query) === FALSE) {echo 'query failed';}
     $conn->close();
