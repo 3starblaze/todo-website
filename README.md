@@ -40,3 +40,11 @@ CREATE USER '__username__'@'localhost' IDENTIFIED BY '__password__';
 ```mysql
 GRANT ALL PRIVILEGES on todo.* TO __username__@localhost;
 ```
+
+8. Replace the following variables in all php files with your data
+```php
+$servername = 'localhost';
+$username = '__username__';
+$password = '__password__';
+$dbname = 'todo';
+```
