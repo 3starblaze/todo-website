@@ -35,3 +35,8 @@ CREATE DATABASE todo;
 ```mysql
 CREATE USER '__username__'@'localhost' IDENTIFIED BY '__password__';
 ```
+
+7. Grant all privileges to it
+```mysql
+GRANT ALL PRIVILEGES on todo.* TO __username__@localhost;
+```
