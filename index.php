@@ -14,7 +14,7 @@
     <title>Darāmo lietu saraksts</title>
   </head>
   <body>
-    <h1>Darāmo lietu saraksts</h1>
+    <h1 class="main-title">Darāmo lietu saraksts</h1>
       <!-- Wrap all tasks in "row" div to make tasks stack horizontally-->
     <div class="">
     <?php
@@ -80,7 +80,7 @@ $conn->close();
 ?>
     </div>
     <a href="create-new.html">
-      <button id="create-new" class="btn btn-primary btn-lg" >
+      <button id="create-new" class="btn btn-outline-primary btn-lg" >
     Pievienot jaunu</button>
     </a>
   </body>
