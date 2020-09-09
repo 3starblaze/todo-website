@@ -1,6 +1,9 @@
 # todo-website
 Website that tracks todo tasks!
 
+## Notice
+This code is a mess and was made long time ago, am aware of state of it.
+
 ## Required packages
 * `php-mysql`
 * `php`
